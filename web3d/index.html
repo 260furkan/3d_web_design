@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Otomobil Teknolojileri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            overflow-x: hidden;
+        }
+        
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        .logo {
+            height: 40px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d50000;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #d50000;
+        }
+        
+        /* Main Content */
+        .container {
+            display: flex;
+            height: 100vh;
+            padding-top: 80px;
+        }
+        
+        .model-container {
+            width: 65%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .info-panel {
+            width: 35%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        .specs {
+            margin-top: 30px;
+        }
+        
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 5px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">.....</div>
+        <div class="nav-links">
+            <a href="#">Ana Sayfa</a>
+            <a href="#">Modeller</a>
+            <a href="#">Teknolojiler</a>
+            <a href="#">Hakkımızda</a>
+            <a href="#">İletişim</a>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="model-container" id="model-container"></div>
+        <div class="info-panel">
+            <h1>Yeni Nesil Performans</h1>
+            <p>Mükemmel tasarım ve ileri teknoloji bir arada. Yeni nesil premium sürüş deneyimi sizi bekliyor.</p>
+            
+            <div class="specs">
+                <div class="spec-item">
+                    <span>Motor Gücü</span>
+                    <strong>450 HP</strong>
+                </div>
+                <div class="spec-item">
+                    <span>0-100 km/s</span>
+                    <strong>3.8 sn</strong>
+                </div>
+                <div class="spec-item">
+                    <span>Maksimum Hız</span>
+                    <strong>295 km/s</strong>
+                </div>
+                <div class="spec-item">
+                    <span>Ağırlık</span>
+                    <strong>1.580 kg</strong>
+                </div>
+            </div>
+            
+            <button style="margin-top: 30px; padding: 12px 25px; background-color: #d50000; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">
+                Daha Fazla Bilgi Al
+            </button>
+        </div>
+    </div>
+    
+    <div id="loading">Model yükleniyor...</div>
+
+    <!-- Three.js ES Modules -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
+        }
+    }
+    </script>
+    
+    <!-- Ana script -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
